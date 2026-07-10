@@ -1,0 +1,23 @@
+name: Agent proposal
+description: Propose a specialized CareerOS agent
+title: "[Agent]: "
+labels: ["agent", "proposal"]
+body:
+  - type: input
+    id: agent-name
+    attributes:
+      label: Agent name
+    validations:
+      required: true
+  - type: textarea
+    id: mission
+    attributes:
+      label: Mission
+      description: What should this agent do?
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs and outputs
+      description: Which inputs does it need and which outputs should it generate?
