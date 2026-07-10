@@ -10,3 +10,8 @@ __pycache__/
 dist/
 build/
 *.egg-info/
+
+# Private CareerOS workspace
+workspace/
+private/
+outputs/private/
