@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://careeros.org/schemas/opportunity/1.0",
+  "title": "CareerOS Opportunity",
+  "description": "Structured professional opportunity contract used by the Opportunity Tailoring Engine.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "opportunity_id",
+    "title",
+    "description",
+    "organization"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "opportunity_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "title": {
+      "$ref": "#/$defs/localizedText"
+    },
+    "description": {
+      "$ref": "#/$defs/localizedText"
+    },
+    "organization": {
+      "$ref": "#/$defs/organization"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "open",
+        "paused",
+        "closed",
+        "archived"
+      ]
+    },
+    "employment_type": {
+      "enum": [
+        "full_time",
+        "part_time",
+        "contract",
+        "freelance",
+        "internship",
+        "temporary",
+        "volunteer",
+        "other"
+      ]
+    },
+    "work_model": {
+      "enum": [
+        "remote",
+        "hybrid",
+        "onsite",
+        "flexible",
+        "unspecified"
+      ]
+    },
+    "seniority": {
+      "enum": [
+        "intern",
+        "entry",
+        "junior",
+        "mid",
+        "senior",
+        "lead",
+        "principal",
+        "manager",
+        "director",
+        "executive",
+        "unspecified"
+      ]
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/location"
+      },
+      "default": []
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "responsibilities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/localizedText"
+      },
+      "default": []
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/requirement"
+      },
+      "default": []
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "compensation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/compensation"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "source": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/externalSource"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "closes_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "$defs": {
+    "localizedText": {
+      "type": "object",
+      "required": [
+        "values"
+      ],
+      "properties": {
+        "default_language": {
+          "type": "string",
+          "default": "en"
+        },
+        "values": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "organization": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "website": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "industry": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "country_code": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Z]{2}$"
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "timezone": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "requirement": {
+      "type": "object",
+      "required": [
+        "requirement_id",
+        "text",
+        "level"
+      ],
+      "properties": {
+        "requirement_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "level": {
+          "enum": [
+            "required",
+            "preferred",
+            "optional"
+          ]
+        },
+        "category": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      },
+      "additionalProperties": false
+    },
+    "compensation": {
+      "type": "object",
+      "required": [
+        "currency",
+        "period"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "period": {
+          "enum": [
+            "hourly",
+            "daily",
+            "weekly",
+            "monthly",
+            "yearly",
+            "fixed"
+          ]
+        },
+        "minimum": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "maximum": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "externalSource": {
+      "type": "object",
+      "required": [
+        "platform"
+      ],
+      "properties": {
+        "platform": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "external_identifier": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

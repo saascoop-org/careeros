@@ -1,0 +1,94 @@
+schema_version: "1.0"
+opportunity_id: "e512bb32-cb6c-466d-a11f-cb702ca2de2d"
+
+title:
+  default_language: "en"
+  values:
+    en: "Microsoft Data and Analytics Subject Matter Expert"
+    pt-BR: "Especialista em Dados e Analytics Microsoft"
+
+description:
+  default_language: "en"
+  values:
+    en: >
+      Review technical learning content, validate workflows and support
+      course development across Microsoft data technologies.
+
+organization:
+  name: "Example International Client"
+  website: "https://example.org"
+  industry: "Education Technology"
+
+status: "open"
+employment_type: "freelance"
+work_model: "remote"
+seniority: "senior"
+
+locations:
+  - country_code: "US"
+    timezone: "America/New_York"
+
+languages:
+  - "en"
+
+responsibilities:
+  - default_language: "en"
+    values:
+      en: "Review and validate technical course content."
+  - default_language: "en"
+    values:
+      en: "Explain complex data concepts clearly and practically."
+
+requirements:
+  - requirement_id: "req-001"
+    text:
+      default_language: "en"
+      values:
+        en: "Professional experience with Microsoft Fabric."
+    level: "required"
+    category: "technology"
+    keywords:
+      - "Microsoft Fabric"
+
+  - requirement_id: "req-002"
+    text:
+      default_language: "en"
+      values:
+        en: "Professional experience with Power BI and SQL Server."
+    level: "required"
+    category: "technology"
+    keywords:
+      - "Power BI"
+      - "SQL Server"
+
+  - requirement_id: "req-003"
+    text:
+      default_language: "en"
+      values:
+        en: "Ability to review technical processes and documentation."
+    level: "preferred"
+    category: "competency"
+    keywords:
+      - "technical validation"
+      - "documentation"
+
+keywords:
+  - "Microsoft Fabric"
+  - "Power BI"
+  - "SQL Server"
+  - "Data Engineering"
+  - "Technical Content Review"
+
+compensation:
+  currency: "USD"
+  period: "hourly"
+  minimum: 30
+  maximum: 60
+
+source:
+  platform: "upwork"
+  uri: "https://example.org/opportunities/microsoft-sme"
+  external_identifier: "UPWORK-SME-001"
+
+published_at: "2026-07-01T12:00:00Z"
+closes_at: null
