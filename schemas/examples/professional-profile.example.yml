@@ -1,0 +1,52 @@
+schema_version: "1.0"
+profile_id: "c327d5c5-67a6-4748-825d-0c71f34401ea"
+name:
+  full_name: "Sample Professional"
+  preferred_name: "Sample"
+contact:
+  email: "sample@example.org"
+  city: "São Paulo"
+  country_code: "BR"
+  website_urls:
+    - "https://example.org"
+summaries:
+  - default_language: "en"
+    values:
+      en: "Data and analytics professional with enterprise experience."
+      pt-BR: "Profissional de dados e analytics com experiência empresarial."
+experiences:
+  - experience_id: "3e909556-a29e-4424-87cb-aa6f80d59028"
+    organization: "Example Organization"
+    role:
+      default_language: "en"
+      values:
+        en: "Business Intelligence Analyst"
+        pt-BR: "Analista de Inteligência de Negócios"
+    period:
+      start_year: 2020
+      start_month: 1
+      is_current: true
+    achievements:
+      - default_language: "en"
+        values:
+          en: "Improved the reliability of enterprise reporting workflows."
+          pt-BR: "Aprimorou a confiabilidade dos fluxos corporativos de relatórios."
+    technologies: ["Power BI", "SQL Server", "Microsoft Fabric"]
+    evidence:
+      - evidence_id: "1538f194-0cb3-4bd1-a13c-af0192461f09"
+        status: "user_confirmed"
+        source_label: "Employment record"
+projects: []
+skills:
+  - skill_id: "94391e66-146e-48e5-80f8-0f76c44f72d2"
+    name: "Power BI"
+    level: "advanced"
+    years_of_experience: 8
+certifications: []
+education: []
+languages:
+  - language_code: "pt-BR"
+    proficiency: "native"
+  - language_code: "en"
+    proficiency: "intermediate"
+publications: []
