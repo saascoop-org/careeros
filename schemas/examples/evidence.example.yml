@@ -1,0 +1,31 @@
+schema_version: "1.0"
+evidence_id: "1538f194-0cb3-4bd1-a13c-af0192461f09"
+source:
+  source_type: "employment_record"
+  label: "Employment record"
+  external_identifier: "EMP-001"
+collection_method: "manual"
+collected_at: "2026-07-10T12:00:00Z"
+verification_status: "user_confirmed"
+confidence:
+  value: 0.85
+consent:
+  granted: true
+  visibility: "private"
+  purpose: "Generate an opportunity-specific résumé"
+  granted_at: "2026-07-10T12:00:00Z"
+fingerprint:
+  algorithm: "sha256"
+  value: "a9f5d0e82942f00184c1a24ff7df00f4a1c77ef8d7f4c3014b64d66c382f5010"
+content_reference: "workspace/private/evidence/employment-record-001.pdf"
+claims:
+  - entity_id: "3e909556-a29e-4424-87cb-aa6f80d59028"
+    entity_type: "experience"
+    claim_path: "achievements[0]"
+transformations:
+  - transformation_type: "extracted"
+    performed_at: "2026-07-10T12:05:00Z"
+    performed_by: "careeros-document-parser"
+    metadata:
+      parser_version: "0.1.0"
+supersedes_evidence_id: null

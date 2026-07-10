@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://careeros.org/schemas/evidence/1.0",
+  "title": "CareerOS Evidence Record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "source",
+    "collection_method",
+    "collected_at",
+    "verification_status",
+    "confidence",
+    "consent"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "evidence_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "source_type",
+        "label"
+      ]
+    },
+    "collection_method": {
+      "type": "string"
+    },
+    "collected_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "verification_status": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "object",
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "consent": {
+      "type": "object",
+      "required": [
+        "granted",
+        "visibility"
+      ]
+    },
+    "fingerprint": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "content_reference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claims": {
+      "type": "array"
+    },
+    "transformations": {
+      "type": "array"
+    },
+    "supersedes_evidence_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    }
+  },
+  "additionalProperties": false
+}
