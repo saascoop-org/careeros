@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://careeros.org/schemas/professional-profile/1.0",
+  "title": "CareerOS Professional Profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "profile_id",
+    "name"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "profile_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "object",
+      "required": [
+        "full_name"
+      ],
+      "properties": {
+        "full_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "preferred_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "contact": {
+      "type": "object"
+    },
+    "summaries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/localizedText"
+      }
+    },
+    "experiences": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "publications": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "$defs": {
+    "localizedText": {
+      "type": "object",
+      "required": [
+        "values"
+      ],
+      "properties": {
+        "default_language": {
+          "type": "string",
+          "default": "en"
+        },
+        "values": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
