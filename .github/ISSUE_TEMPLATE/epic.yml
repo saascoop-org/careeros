@@ -1,0 +1,56 @@
+name: Epic
+description: Track a major CareerOS capability or milestone
+title: "[EPIC] "
+labels:
+  - "type:epic"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for capabilities that require multiple issues and pull requests.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Which user problem does this epic solve?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the observable result.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included?
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
+      description: What is intentionally excluded?
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Use a checklist.
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
+  - type: textarea
+    id: architecture
+    attributes:
+      label: Architecture impact
+      description: Link ADRs, diagrams or domain changes.
+  - type: textarea
+    id: children
+    attributes:
+      label: Child issues
+      description: Add child issues as they are created.
