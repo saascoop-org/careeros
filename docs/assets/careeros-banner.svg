@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" role="img" aria-labelledby="title desc">
+  <title id="title">CareerOS</title>
+  <desc id="desc">CareerOS open source career intelligence platform banner</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0.35"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#020617" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="480" rx="32" fill="url(#bg)"/>
+
+  <circle cx="1360" cy="85" r="210" fill="url(#orb)" opacity="0.35"/>
+  <circle cx="1460" cy="405" r="260" fill="url(#orb)" opacity="0.22"/>
+  <circle cx="180" cy="420" r="180" fill="#38bdf8" opacity="0.08"/>
+
+  <g opacity="0.18" stroke="#bfdbfe" stroke-width="3" fill="none">
+    <path d="M1030 112 C1140 55 1250 78 1342 150"/>
+    <path d="M1065 200 C1180 150 1298 168 1420 250"/>
+    <path d="M1018 300 C1155 245 1310 275 1480 370"/>
+    <circle cx="1030" cy="112" r="9" fill="#bfdbfe"/>
+    <circle cx="1342" cy="150" r="9" fill="#bfdbfe"/>
+    <circle cx="1065" cy="200" r="9" fill="#bfdbfe"/>
+    <circle cx="1420" cy="250" r="9" fill="#bfdbfe"/>
+    <circle cx="1018" cy="300" r="9" fill="#bfdbfe"/>
+    <circle cx="1480" cy="370" r="9" fill="#bfdbfe"/>
+  </g>
+
+  <g transform="translate(110,95)" filter="url(#shadow)">
+    <rect width="130" height="130" rx="30" fill="#f8fafc" opacity="0.97"/>
+    <path d="M36 33 H95 V49 H54 V65 H89 V81 H54 V97 H96" fill="none" stroke="#1d4ed8" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="102" cy="31" r="12" fill="#14b8a6"/>
+  </g>
+
+  <text x="285" y="180" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="96" font-weight="800" fill="#f8fafc">CareerOS</text>
+  <text x="290" y="245" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="31" font-weight="500" fill="#bfdbfe">
+    Professional evidence into opportunity-specific career assets
+  </text>
+
+  <g transform="translate(290,300)">
+    <rect width="208" height="52" rx="26" fill="#eff6ff" opacity="0.96"/>
+    <text x="104" y="34" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1d4ed8">OPEN SOURCE</text>
+
+    <rect x="228" width="240" height="52" rx="26" fill="#ecfeff" opacity="0.96"/>
+    <text x="348" y="34" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f766e">EVIDENCE FIRST</text>
+
+    <rect x="488" width="238" height="52" rx="26" fill="#f8fafc" opacity="0.96"/>
+    <text x="607" y="34" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#334155">HUMAN CONTROLLED</text>
+  </g>
+
+  <text x="290" y="410" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#cbd5e1">
+    Build once. Reuse everywhere.
+  </text>
+</svg>
